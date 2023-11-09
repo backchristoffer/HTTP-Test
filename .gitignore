@@ -1,0 +1,5 @@
+.env
+*.log
+vscode
+.vscode
+http-test
