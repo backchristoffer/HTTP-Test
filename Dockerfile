@@ -1,4 +1,4 @@
-FROM golang:nanoserver-1809
+FROM golang:alpine
 WORKDIR /app
 COPY . .
 RUN go build
