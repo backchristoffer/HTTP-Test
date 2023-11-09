@@ -44,16 +44,16 @@ spec:
   persistentVolumeReclaimPolicy: Delete 
   storageClassName: local-path
   local: 
-    path: /tmp/data
-  nodeAffinity: 
-    required: 
+    path: /tmp
+  nodeAffinity:
+    required:
       nodeSelectorTerms:
         - matchExpressions:
-          - key: size
+          - key: node-role.kubernetes.io/worker
             operator: In 
             values:
-              - large
-
+              - ''
+            
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -64,6 +64,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   storageClassName: local-path
+  volumeMode: Filesystem
   resources:
     requests:
       storage: 2Gi
