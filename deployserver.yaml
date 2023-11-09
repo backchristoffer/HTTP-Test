@@ -24,6 +24,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: http-pvc
+  namespace: http-test
 spec:
   accessModes:
     - ReadWriteOnce
@@ -36,6 +37,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: http-deployment
+  namespace: http-test
 spec:
   selector:
     matchLabels:
