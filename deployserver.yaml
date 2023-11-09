@@ -48,7 +48,7 @@ spec:
     spec:
       containers:
       - name: http-server
-        image: "backchristoffer/http-test:latest"
+        image: "ghcr.io/backchristoffer/http-test:latest"
         ports:
           - containerPort: 8080
             protocol: TCP
