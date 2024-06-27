@@ -3,3 +3,7 @@
 vscode
 .vscode
 http-test
+go.sum
+*.exe
+*.test
+*.out
